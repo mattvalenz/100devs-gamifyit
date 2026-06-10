@@ -4,7 +4,7 @@
 
 ```
 100devs-gamifyit/
-├── frontend/               # Next.js 16 app (React 19, TypeScript, Tailwind v4)
+├── frontend/               # Next.js app (React 19, TypeScript, Tailwind v4)
 │   ├── public/             # Static assets (SVGs, images)
 │   └── src/
 │       ├── app/
@@ -17,10 +17,11 @@
 │       │   ├── globals.css         # Global styles and Tailwind theme (colors, fonts)
 │       │   ├── layout.tsx          # Root layout (Navbar, Footer, etc.)
 │       │   └── page.tsx            # URL: /
-│       └── components/
-│           ├── shared/     # Layout-level components used across all pages (Navbar, Footer, etc.)
-│           └── ui/         # Small, reusable UI (buttons, inputs, cards, etc.)
-└── backend/                # tbd
+│       ├── components/
+│       │   ├── layout/     # Structural components (Navbar, Footer, Sidebar, etc.)
+│       │   └── ui/         # Reusable primitives (Button, Input, Card, etc.)
+│       └── lib/            # Helpers, API clients, hooks, utilities
+└── backend/ tbd
 ```
 
 ## Getting Started
