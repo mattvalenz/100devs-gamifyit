@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: Orbit;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../public/fonts/orbit-regular.woff2);
+}
+
+@font-face {
+  font-family: Silkscreen;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../public/fonts/silkscreen-regular.woff2);
+}
+
+@font-face {
+  font-family: Silkscreen;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../public/fonts/silkscreen-bold.woff2);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -15,6 +39,9 @@
   --color-secondary: #FFF6EA;
   --color-action: #7BB9FA;
   --color-accent: #D0D0D0;
+
+  --font-orbit: "Orbit", sans-serif;
+  --font-silkscreen: "Silkscreen", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,5 +54,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-orbit);
 }
