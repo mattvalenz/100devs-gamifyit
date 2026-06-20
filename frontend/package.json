@@ -2,6 +2,9 @@
   "name": "100devs-group",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "postcss": "^8.5.10"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +12,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "js-yaml": "^4.2.0",
     "next": "16.2.6",
+    "postcss": "^8.5.10",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
