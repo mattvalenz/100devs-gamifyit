@@ -37,7 +37,7 @@
     gap: 20px;
     color: #002C47;
     font-family: var(--font-orbit);
-    font-size: 12px;
+    font-size: 16px;
     list-style: none;
 }
 .signin{
@@ -50,7 +50,7 @@
     width: 70px;
     height: 30px;
     font-family: var(--font-silkscreen);
-    font-size: 12px;
+    font-size: 16px;
     background-color: #FFA54D;
     border-radius: 20px;
 }
