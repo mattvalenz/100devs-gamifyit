@@ -1,0 +1,62 @@
+.splitScreenLayout {
+
+    display: flex;
+    flex-grow: 1;
+    width: 50%;
+    background-color: #002C47;
+}
+
+.heroLeft {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30%;
+    gap: 10px;
+    
+}
+
+.yourLevelCard {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 60px;
+    background-color: #FFEBD4;
+    border-radius: 10;
+    color: #002C47;
+}
+
+.silverCard {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 60px;
+    background-color: aliceblue;
+    border-radius: 10;
+    color: #002C47;
+    font-family: var(--font-silkscreen);
+    font-size: 32px;
+
+}
+
+/* wrapper span — this is what gets the red background */
+.starIcon {
+  background-color: #F34E4E;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* the img itself — white filter */
+.silverIcon {
+  filter: brightness(0) invert(1);
+}
