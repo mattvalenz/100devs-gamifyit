@@ -1,62 +1,157 @@
 .splitScreenLayout {
-
-    display: flex;
-    flex-grow: 1;
-    width: 50%;
-    background-color: #002C47;
+  display: flex;
+  width: 100%;
 }
 
 .heroLeft {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 30%;
-    gap: 10px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+  background-color: #002C47;
+  gap: 12px;
 }
 
-.yourLevelCard {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 60px;
-    background-color: #FFEBD4;
-    border-radius: 10;
-    color: #002C47;
+.heroRight {
+  width: 50%;
+  height: 100vh;
+  background-color: #FFF;
 }
 
-.silverCard {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 60px;
-    background-color: aliceblue;
-    border-radius: 10;
-    color: #002C47;
-    font-family: var(--font-silkscreen);
-    font-size: 32px;
-
+/* ── Level badge ── */
+.levelBadge {
+  display: flex;
+  align-items: stretch;
+  width: fit-content;
+  height: 60px;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-/* wrapper span — this is what gets the red background */
+.peachSide {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 44px 0 8px;
+  background-color: #FFEBD4;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 24px) 100%, 0 100%);
+}
+
+.whiteSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px 0 36px;
+  background-color: #FFF;
+  font-family: var(--font-silkscreen);
+  font-size: 32px;
+  color: #002C47;
+  margin-left: -24px;
+}
+
 .starIcon {
-  background-color: #F34E4E;
-  border-radius: 8px;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  margin-left: 6px;
+  background-color: #F34E4E;
+  border-radius: 8px;
 }
 
-/* the img itself — white filter */
 .silverIcon {
   filter: brightness(0) invert(1);
+}
+
+.yourLevel {
+  color: #002C47;
+  font-size: 16px;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+/* ── Score card ── */
+.scoreCard {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 20px;
+  background-color: #FFF;
+  padding: 16px 24px;
+  box-sizing: border-box;
+}
+
+.tierRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.tierItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconWrap {
+  background-color: #F34E4E;
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tierIcon {
+  filter: brightness(0) invert(1);
+}
+
+.tierScore {
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+}
+
+.footer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: 50;
+  margin-top: 15%;
+  gap: 15px;
+}
+
+.freeToPlay {
+
+  color: #FFF;
+  font-size: 14px;
+}
+
+.getStarted {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 65px;
+  font-size: 24px;
+  font-family: var(--font-silkscreen);
+  background-color: #FFA54D;
+  border-radius: 20px;
+}
+.inviteFriends {
+
+color: #FFF;
+font-size: 14px;
 }
