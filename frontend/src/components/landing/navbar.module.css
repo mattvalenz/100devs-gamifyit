@@ -1,0 +1,92 @@
+.navbar {
+
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding: 10px 10px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFEBD4;
+}
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10;
+}
+
+.right {
+
+    display: flex;
+    align-items: center;
+    padding-left: 43%;
+}
+.logoicon {
+
+    filter: invert(52%) sepia(71%) saturate(2680%) hue-rotate(328deg) brightness(95%) contrast(100%);
+}
+
+.logoname {
+    color: #002C47;
+    font-size: 24px;
+    font-family: var(--font-silkscreen);
+}
+.links {
+    
+
+    display: flex;
+    gap: 20px;
+    color: #002C47;
+    font-family: var(--font-orbit);
+    font-size: 12px;
+    list-style: none;
+}
+.signin{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #002C47;
+    margin-left: 40px;
+    width: 70px;
+    height: 30px;
+    font-family: var(--font-silkscreen);
+    font-size: 12px;
+    background-color: #FFA54D;
+    border-radius: 20px;
+}
+.menuButton {
+
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    height: 70px;
+
+}
+
+.mobileMenu {
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: 14px;
+    top: 50px;
+    left: 85%;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .signin,
+    .links{
+        display: none;
+    }
+
+    .menuButton {
+        display: block;
+        width: 90%;
+        height: 50px;
+    }
+}
