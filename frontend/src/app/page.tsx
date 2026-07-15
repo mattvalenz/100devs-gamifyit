@@ -1,5 +1,5 @@
 import Navbar from "@/components/shared/Navbar";
-
+import HeroLeft from "../components/landing/HeroLeft";
 
 export default function Page() {
 
@@ -7,6 +7,7 @@ export default function Page() {
     <>
       <main>
         <Navbar />
+        <HeroLeft />
         </main>
     </>
   )

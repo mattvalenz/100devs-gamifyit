@@ -1,0 +1,85 @@
+.wrapper {
+  padding: 8px 0 4px;
+}
+
+.track {
+  position: relative;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  height: 4px;
+  background: #FFEBD4;
+  border-radius: 99px;
+}
+
+.fill {
+  position: absolute;
+  left: 18px;
+  height: 4px;
+  background: #ef4444;
+  border-radius: 99px;
+  animation: growFill 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dotStart {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.dotStart::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: #ef4444;
+  opacity: 0;
+  animation: ripple 1.8s ease-in-out infinite;
+}
+
+.dotInactive {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FFEBD4;
+  flex-shrink: 0;
+}
+
+@keyframes growFill {
+  from { width: 0; }
+  to   { width: calc(25% - 18px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.15); }
+}
+
+@keyframes ripple {
+  0%   { transform: scale(0.8); opacity: 0.4; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
