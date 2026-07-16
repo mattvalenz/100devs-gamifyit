@@ -24,7 +24,7 @@ export default function ResetPassword() {
 		} else {
 			startTransition(async () => {			
 				await authClient.resetPassword({
-					newPassword: "password1234",
+					newPassword: password,
 					token,
 				});	
 				setSuccess(true);
