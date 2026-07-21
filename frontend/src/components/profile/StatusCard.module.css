@@ -1,0 +1,85 @@
+.welcomeCard {
+    display: flex;
+    flex-direction: column;
+    border: solid .5px white;
+    border-radius: 25px;
+    font-family: var(--font-orbit);
+    padding: 20px;
+}
+
+.userWelcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    justify-content: flex-start;
+}
+
+.greeting {
+    font-size: 2.5rem;
+    flex: 1;
+    text-align: center;
+}
+
+.currentLevel {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: stretch;
+    border-radius: 15px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.iconWrap {
+    background-color: #F34E4E;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.levelLeft {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgb(255, 232, 207);
+    padding: 6px 12px;
+    color: black;
+    font-family: var(--font-orbit);
+    font-size: 1.5rem;
+}
+
+.levelRight {
+    background-color: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-silkscreen);
+    font-size: 1.5rem;
+}
+
+.activeStreak {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    background-color: red;
+    border-radius: 20px;
+    padding: 4px 8px;
+    width: fit-content;
+    color: black;
+    font-family: var(--font-silkscreen);
+}
+
+.activeStreak img{
+    align-self: center;
+}
+.activeStreak span{
+    text-align: center;
+    padding: 5px;
+}
