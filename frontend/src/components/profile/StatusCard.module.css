@@ -63,14 +63,23 @@
     font-size: 1.5rem;
 }
 
-.activeStreak {
+.statusRow {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
+    /* width: 90%; */
+}
+
+.activeStreak {
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
     background-color: red;
     border-radius: 20px;
-    padding: 4px 8px;
+    padding: 4px 20px;
     width: fit-content;
     color: black;
     font-family: var(--font-silkscreen);
@@ -81,5 +90,12 @@
 }
 .activeStreak span{
     text-align: center;
-    padding: 5px;
+    font-size: .75rem;
+    padding: 6px 10px;
+}
+
+.xpText{
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }

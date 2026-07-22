@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styles from './StatusCard.module.css'
+import ProgressBar from "@/components/profile/ProgressBar"
 
 // Welcome Card 
 export default function Status(){
@@ -34,20 +35,22 @@ export default function Status(){
                     <span>SILVER</span>
                 </div>
             </div>
+            <div className={styles.statusRow}>
+                {/* Streak Badge */}
+                <div className={styles.activeStreak}>
+                <Image 
+                    src="/icons/streak-icon.svg" 
+                    alt="Streak" width={24} 
+                    height={24} />
+                    <span>Streak<br />Active!</span>
+                </div>
 
-            {/* Streak Badge */}
-            <div className={styles.activeStreak}>
-            <Image 
-                src="/icons/streak-icon.svg" 
-                alt="Streak" width={24} 
-                height={24} />
-                <span>Streak<br />Active!</span>
+                {/* Progress Bar */}
+                <ProgressBar currentXP={150} maxXP={500}/>
             </div>
-
-            {/* Progress Bar */}
-            <span> Lorem ipsum dolor sit amet consectetur.</span>
+                <span className={styles.xpText}> 50 points to the next level </span>
         </div>
-
+    
         </>
     )
 }
