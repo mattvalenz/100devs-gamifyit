@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { hostname } from "os";
 
 module.exports = {
   allowedDevOrigins: ['127.0.0.1'],

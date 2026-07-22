@@ -1,51 +1,56 @@
+/* Outer bar container — full width with rounded ends */
 .track {
-    position: relative;
+    position: relative; /* Needed so .dots can position absolutely inside it */
     display: flex;
     align-items: center;
     width: 100%;
     height: 15px;
-    background-color: rgb(255, 232, 207);
+    background-color: rgb(255, 232, 207); /* Peach/cream track background */
     border-radius: 99px;
 }
 
+/* Colored fill bar — width is set dynamically via inline style in JSX */
 .fill {
     height: 100%;
-    background-color: #F34E4E;
+    background-color: #F34E4E; /* Primary red — matches team design tokens */
     border-radius: 99px;
 }
 
+/* Dot container — sits on top of the track using absolute positioning */
 .dots {
-    position: absolute;
+    position: absolute; /* Overlays the track */
     left: 0;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* Vertically centers dots on the track */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Evenly spaces dots from left to right */
     align-items: center;
 }
 
+/* First dot — active milestone, pulses to draw attention */
 .dotStart {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #ef4444;
+  background: #ef4444; /* Red — indicates active/completed milestone */
   color: #fff;
   font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevents dot from shrinking in flex container */
   position: relative;
-  animation: pulse 1.8s ease-in-out infinite;
+  animation: pulse 1.8s ease-in-out infinite; /* TODO: Add @keyframes pulse */
 }
 
-
+/* Inactive milestone dots — not yet reached by user */
+/* TODO: Make dot size consistent — dotStart is larger than dotInactive */
 .dotInactive {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #FFEBD4;
   flex-shrink: 0;
-  background: rgb(255, 232, 207)
+  background: rgb(255, 232, 207); /* Same as track — blends in until reached */
+  /* Note: first background declaration is overridden by the second */
 }
