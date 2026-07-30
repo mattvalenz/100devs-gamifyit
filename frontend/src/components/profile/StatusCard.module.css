@@ -1,0 +1,119 @@
+/* ===== CARD CONTAINER ===== */
+/* Outer wrapper for the entire status card */
+.welcomeCard {
+    display: flex;
+    flex-direction: column; /* Stacks all sections vertically */
+    border: solid .5px white;
+    border-radius: 25px;
+    font-family: var(--font-orbit); /* Default font for the whole card */
+    padding: 20px;
+}
+
+/* ===== TOP ROW: AVATAR + GREETING ===== */
+.userWelcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    justify-content: flex-start; /* Avatar stays left, greeting fills remaining space */
+}
+
+/* Welcome message — grows to fill space next to avatar */
+.greeting {
+    font-size: 2.5rem;
+    flex: 1; /* Takes up all remaining horizontal space */
+    text-align: center;
+}
+
+/* ===== LEVEL BADGE ===== */
+/* Pill-shaped badge with two sides — peach left, white right */
+.currentLevel {
+    display: flex;
+    flex-direction: row;
+    align-self: center; /* Centers badge horizontally in the card */
+    align-items: stretch; /* Makes both sides equal height */
+    border-radius: 15px;
+    overflow: hidden; /* Clips children to the rounded corners */
+    width: fit-content; /* Shrinks to content size */
+}
+
+/* Red circle wrapping the level icon */
+.iconWrap {
+    background-color: #F34E4E; /* Primary red */
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left side of level badge — peach background with "Your Level:" text */
+.levelLeft {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgb(255, 232, 207); /* Peach — matches secondary color */
+    padding: 6px 12px;
+    color: black;
+    font-family: var(--font-orbit);
+    font-size: 1.5rem;
+}
+
+/* Right side of level badge — white background with level name */
+.levelRight {
+    background-color: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-silkscreen); /* Pixel font for level name */
+    font-size: 1.5rem;
+}
+
+/* ===== STATUS ROW: STREAK + PROGRESS BAR ===== */
+/* Row containing streak badge and XP progress bar side by side */
+.statusRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Streak badge — red pill shape, only shown when streak is active */
+/* TODO: Add conditional rendering based on isStreakActive prop */
+.activeStreak {
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    background-color: red;
+    border-radius: 20px;
+    padding: 4px 20px;
+    width: fit-content;
+    color: black;
+    font-family: var(--font-silkscreen); /* Pixel font for streak text */
+}
+
+/* Targets the img element rendered by Next.js <Image> inside streak badge */
+.activeStreak img{
+    align-self: center;
+}
+
+/* Stacked text inside streak badge */
+.activeStreak span{
+    text-align: center;
+    font-size: .75rem;
+    padding: 6px 10px;
+}
+
+/* ===== XP TEXT ===== */
+/* Shows points remaining to next level e.g. "50 points to the next level" */
+/* TODO: Calculate dynamically from maxXP - currentXP */
+.xpText{
+    align-items: center;      /* Note: these only work on flex/grid children */
+    justify-content: center;  /* Consider adding display: flex if centering isn't working */
+    align-self: center;
+}
